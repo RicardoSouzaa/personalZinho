@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="personalZinho.MainPage">
+
+    <ScrollView VerticalScrollBarVisibility="Always">
+    <StackLayout BackgroundColor="LightYellow">
+        
+        <StackLayout>
+            
+            <Label Text="Personalzinho" TextColor="DarkSlateBlue" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Entry x:Name="entAluno" Placeholder="Nome do aluno"/>
+            <Entry x:Name="entExercicio" Placeholder="Exercício"/>
+
+            <StackLayout HeightRequest="15"/>
+            <Label Text="Séries" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+            <Entry x:Name="entSerie" Placeholder="Numero de séries" WidthRequest="50" HorizontalTextAlignment="Center" />
+            
+            
+            
+        </StackLayout>
+
+        <StackLayout HeightRequest="20"/>
+        
+        <Label Text="Quantidade de Repetições" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+
+       
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+
+                <Entry x:Name="entRepet01" Keyboard="Numeric" Placeholder="S1" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet02" Keyboard="Numeric" Placeholder="S2" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet03" Keyboard="Numeric" Placeholder="S3" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet04" Keyboard="Numeric" Placeholder="S4" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet05" Keyboard="Numeric" Placeholder="S5" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet06" Keyboard="Numeric" Placeholder="S6" WidthRequest="50" HorizontalTextAlignment="Center"/>
+            
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+
+                <Entry x:Name="entRepet07" Keyboard="Numeric" Placeholder="S7" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet08" Keyboard="Numeric" Placeholder="S8" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet09" Keyboard="Numeric" Placeholder="S9" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet10" Keyboard="Numeric" Placeholder="S10" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet11" Keyboard="Numeric" Placeholder="S11" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet12" Keyboard="Numeric" Placeholder="S12" WidthRequest="50" HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+
+            <StackLayout HeightRequest="20"/>
+
+            <Label Text="Carga dos Exercícios" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+
+                <Entry x:Name="entCarga01" Keyboard="Numeric" Placeholder="Q1" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga02" Keyboard="Numeric" Placeholder="Q2" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga03" Keyboard="Numeric" Placeholder="Q3" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga04" Keyboard="Numeric" Placeholder="Q4" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga05" Keyboard="Numeric" Placeholder="Q5" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga06" Keyboard="Numeric" Placeholder="Q6" WidthRequest="50" HorizontalTextAlignment="Center"/>
+
+        </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+
+                <Entry x:Name="entCarga07" Keyboard="Numeric" Placeholder="Q8" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga08" Keyboard="Numeric" Placeholder="Q9" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga09" Keyboard="Numeric" Placeholder="Q10" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga10" Keyboard="Numeric" Placeholder="Q11" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga11" Keyboard="Numeric" Placeholder="Q12" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga12" Keyboard="Numeric" Placeholder="Q13" WidthRequest="50" HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+
+            <StackLayout HeightRequest="20"/>
+            <StackLayout>
+                
+                <Label Text="Intervalo" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Entry x:Name="entIntervalo" WidthRequest="50" Keyboard="Numeric" HorizontalTextAlignment="Center" Placeholder="Intervalo em segundos" />
+                <StackLayout HeightRequest="20"/>
+                <Button Text="Salvar" BorderColor="DarkBlue" BorderWidth="2" CornerRadius="50" BackgroundColor="CadetBlue" TextColor="White"/>
+                <StackLayout HeightRequest="20"/>
+
+            </StackLayout>
+                        
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
