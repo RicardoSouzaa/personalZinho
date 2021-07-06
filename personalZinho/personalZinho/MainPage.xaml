@@ -4,28 +4,29 @@
              x:Class="personalZinho.MainPage">
 
     <ScrollView VerticalScrollBarVisibility="Always">
-    <StackLayout BackgroundColor="LightYellow">
-        
-        <StackLayout>
-            
-            <Label Text="Personalzinho" TextColor="DarkSlateBlue" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
-            <Entry x:Name="entAluno" Placeholder="Nome do aluno"/>
-            <Entry x:Name="entExercicio" Placeholder="Exercício"/>
+        <StackLayout BackgroundColor="LightYellow">
 
-            <StackLayout HeightRequest="15"/>
-            <Label Text="Séries" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
-            <Entry x:Name="entSerie" Placeholder="Numero de séries" WidthRequest="50" HorizontalTextAlignment="Center" />
-            
-            
-            
-        </StackLayout>
+            <StackLayout>
 
-        <StackLayout HeightRequest="20"/>
-        
-        <Label Text="Quantidade de Repetições" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Personalzinho" TextColor="DarkSlateBlue" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Entry x:Name="entID" Placeholder="ID" Text="0" IsVisible="false" IsEnabled="False"/>
+                <Entry x:Name="entAluno" Placeholder="Nome do aluno"/>
+                <Entry x:Name="entExercicio" Placeholder="Exercício"/>
 
-       
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+                <StackLayout HeightRequest="15"/>
+                <Label Text="Séries" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Entry x:Name="entSerie" Placeholder="Numero de séries" WidthRequest="50" HorizontalTextAlignment="Center" />
+
+
+
+            </StackLayout>
+
+            <StackLayout HeightRequest="20"/>
+
+            <Label Text="Quantidade de Repetições" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
 
                 <Entry x:Name="entRepet01" Keyboard="Numeric" Placeholder="S1" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet02" Keyboard="Numeric" Placeholder="S2" WidthRequest="50" HorizontalTextAlignment="Center"/>
@@ -33,10 +34,10 @@
                 <Entry x:Name="entRepet04" Keyboard="Numeric" Placeholder="S4" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet05" Keyboard="Numeric" Placeholder="S5" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet06" Keyboard="Numeric" Placeholder="S6" WidthRequest="50" HorizontalTextAlignment="Center"/>
-            
-        </StackLayout>
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
 
                 <Entry x:Name="entRepet07" Keyboard="Numeric" Placeholder="S7" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet08" Keyboard="Numeric" Placeholder="S8" WidthRequest="50" HorizontalTextAlignment="Center"/>
@@ -45,14 +46,14 @@
                 <Entry x:Name="entRepet11" Keyboard="Numeric" Placeholder="S11" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet12" Keyboard="Numeric" Placeholder="S12" WidthRequest="50" HorizontalTextAlignment="Center"/>
 
-        </StackLayout>
+            </StackLayout>
 
             <StackLayout HeightRequest="20"/>
 
             <Label Text="Carga dos Exercícios" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
 
 
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
 
                 <Entry x:Name="entCarga01" Keyboard="Numeric" Placeholder="Q1" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entCarga02" Keyboard="Numeric" Placeholder="Q2" WidthRequest="50" HorizontalTextAlignment="Center"/>
@@ -61,7 +62,7 @@
                 <Entry x:Name="entCarga05" Keyboard="Numeric" Placeholder="Q5" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entCarga06" Keyboard="Numeric" Placeholder="Q6" WidthRequest="50" HorizontalTextAlignment="Center"/>
 
-        </StackLayout>
+            </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
 
@@ -76,16 +77,34 @@
 
             <StackLayout HeightRequest="20"/>
             <StackLayout>
-                
+
                 <Label Text="Intervalo" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
                 <Entry x:Name="entIntervalo" WidthRequest="50" Keyboard="Numeric" HorizontalTextAlignment="Center" Placeholder="Intervalo em segundos" />
                 <StackLayout HeightRequest="20"/>
-                <Button Text="Salvar" BorderColor="DarkBlue" BorderWidth="2" CornerRadius="50" BackgroundColor="CadetBlue" TextColor="White"/>
-                <StackLayout HeightRequest="20"/>
 
             </StackLayout>
-                        
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Button x:Name="btnSalvar" Text="Salvar" Clicked="salvarDados" BorderColor="DarkGreen" BorderWidth="2" WidthRequest="150" CornerRadius="50" BackgroundColor="Green" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="btnApagar" Text="Apagar" Clicked="apagarDados" BorderColor="DarkRed" BorderWidth="2" WidthRequest="150" CornerRadius="50" BackgroundColor="red" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout HeightRequest="20"/>
+
+            <StackLayout>
+
+                <ScrollView>
+
+                    <ListView x:Name="ListagemAlunos" BackgroundColor="DarkBlue" HeightRequest="150" ItemSelected="ListagemAlunos_ItemSelected">
+
+                    </ListView>
+
+                </ScrollView>
+
+            </StackLayout>
+
         </StackLayout>
+
     </ScrollView>
 
 </ContentPage>
