@@ -80,46 +80,43 @@ namespace personalZinho
                     return;
                 }
 
-                Aluno aluno = new Aluno()
-                {
-                    ID = int.Parse(entID.Text),
-                    Nome = entAluno.Text,
-                    Exercicio = entExercicio.Text,
-                    Series = int.Parse(entSerie.Text),
-                    Rep01 = int.Parse(entRepet01.Text),
-                    Rep02 = int.Parse(entRepet02.Text),
-                    Rep03 = int.Parse(entRepet03.Text),
-                    Rep04 = int.Parse(entRepet04.Text),
-                    Rep05 = int.Parse(entRepet05.Text),
-                    Rep06 = int.Parse(entRepet06.Text),
-                    Rep07 = int.Parse(entRepet07.Text),
-                    Rep08 = int.Parse(entRepet08.Text),
-                    Rep09 = int.Parse(entRepet09.Text),
-                    Rep10 = int.Parse(entRepet10.Text),
-                    Rep11 = int.Parse(entRepet11.Text),
-                    Rep12 = int.Parse(entRepet12.Text),
-                    Carga01 = int.Parse(entCarga01.Text),
-                    Carga02 = int.Parse(entCarga02.Text),
-                    Carga03 = int.Parse(entCarga03.Text),
-                    Carga04 = int.Parse(entCarga04.Text),
-                    Carga05 = int.Parse(entCarga05.Text),
-                    Carga06 = int.Parse(entCarga06.Text),
-                    Carga07 = int.Parse(entCarga07.Text),
-                    Carga08 = int.Parse(entCarga08.Text),
-                    Carga09 = int.Parse(entCarga09.Text),
-                    Carga10 = int.Parse(entCarga10.Text),
-                    Carga11 = int.Parse(entCarga11.Text),
-                    Carga12 = int.Parse(entCarga12.Text),
-                    Intervalo = int.Parse(entIntervalo.Text)
-                };
+                Aluno aluno = AddAluno();
 
-                if (entID.Text == "0")
-                {
                     contexto.Inserir(aluno);
+                    DisplayAlert("Sucesso", "Aluno e Exercicio inserido com sucesso!", "OK");
+                    ListagemAluno();
+
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro", ex.Message, "OK");
+            }
+        }
+
+
+
+        private void AtualizarDados(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (string.IsNullOrEmpty(entAluno.Text))
+                {
+                    DisplayAlert("Erro", "Informe o nome do ALuno", "OK");
+                    return;
                 }
-                else
-                    contexto.Atualizar(aluno);
-                DisplayAlert("Sucesso", "Aluno e Exercicio cadastrado com sucesso!", "OK");
+
+                if (string.IsNullOrEmpty(entExercicio.Text))
+                {
+                    DisplayAlert("Erro", "Informe o exercício", "OK");
+                    return;
+                }
+
+                Aluno aluno = AddAluno();
+
+                contexto.Atualizar(aluno);
+               
+                DisplayAlert("Sucesso", "Aluno e Exercicio Atualizado com sucesso!", "OK");
                 ListagemAluno();
 
 
@@ -129,6 +126,8 @@ namespace personalZinho
                 DisplayAlert("Erro", ex.Message, "OK");
             }
         }
+
+
 
         private void apagarDados(object sender, EventArgs e)
         {
@@ -195,6 +194,44 @@ namespace personalZinho
             {
                 DisplayAlert("ERRO", ex.Message, "OK");
             }
+        }
+
+        // método para adicionar e atualizar alunos
+        private Aluno AddAluno()
+        {
+            return new Aluno()
+            {
+                ID = int.Parse(entID.Text),
+                Nome = entAluno.Text,
+                Exercicio = entExercicio.Text,
+                Series = int.Parse(entSerie.Text),
+                Rep01 = int.Parse(entRepet01.Text),
+                Rep02 = int.Parse(entRepet02.Text),
+                Rep03 = int.Parse(entRepet03.Text),
+                Rep04 = int.Parse(entRepet04.Text),
+                Rep05 = int.Parse(entRepet05.Text),
+                Rep06 = int.Parse(entRepet06.Text),
+                Rep07 = int.Parse(entRepet07.Text),
+                Rep08 = int.Parse(entRepet08.Text),
+                Rep09 = int.Parse(entRepet09.Text),
+                Rep10 = int.Parse(entRepet10.Text),
+                Rep11 = int.Parse(entRepet11.Text),
+                Rep12 = int.Parse(entRepet12.Text),
+                Carga01 = int.Parse(entCarga01.Text),
+                Carga02 = int.Parse(entCarga02.Text),
+                Carga03 = int.Parse(entCarga03.Text),
+                Carga04 = int.Parse(entCarga04.Text),
+                Carga05 = int.Parse(entCarga05.Text),
+                Carga06 = int.Parse(entCarga06.Text),
+                Carga07 = int.Parse(entCarga07.Text),
+                Carga08 = int.Parse(entCarga08.Text),
+                Carga09 = int.Parse(entCarga09.Text),
+                Carga10 = int.Parse(entCarga10.Text),
+                Carga11 = int.Parse(entCarga11.Text),
+                Carga12 = int.Parse(entCarga12.Text),
+                Intervalo = int.Parse(entIntervalo.Text)
+
+            };
         }
     }
 }

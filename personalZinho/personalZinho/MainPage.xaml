@@ -9,7 +9,7 @@
             <StackLayout>
 
                 <Label Text="Personalzinho" TextColor="DarkSlateBlue" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
-                <Entry x:Name="entID" Placeholder="ID" Text="0" IsVisible="false" IsEnabled="False"/>
+                <Entry x:Name="entID" Placeholder="ID" Text="0" IsVisible="false" IsEnabled="False" />
                 <Entry x:Name="entAluno" Placeholder="Nome do aluno"/>
                 <Entry x:Name="entExercicio" Placeholder="Exercício"/>
 
@@ -32,19 +32,19 @@
                 <Entry x:Name="entRepet02" Keyboard="Numeric" Placeholder="S2" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet03" Keyboard="Numeric" Placeholder="S3" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entRepet04" Keyboard="Numeric" Placeholder="S4" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet05" Keyboard="Numeric" Placeholder="S5" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet06" Keyboard="Numeric" Placeholder="S6" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet05" Keyboard="Numeric" Placeholder="S5" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entRepet06" Keyboard="Numeric" Placeholder="S6" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
 
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
 
-                <Entry x:Name="entRepet07" Keyboard="Numeric" Placeholder="S7" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet08" Keyboard="Numeric" Placeholder="S8" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet09" Keyboard="Numeric" Placeholder="S9" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet10" Keyboard="Numeric" Placeholder="S10" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet11" Keyboard="Numeric" Placeholder="S11" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entRepet12" Keyboard="Numeric" Placeholder="S12" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entRepet07" Keyboard="Numeric" Placeholder="S7" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entRepet08" Keyboard="Numeric" Placeholder="S8" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entRepet09" Keyboard="Numeric" Placeholder="S9" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entRepet10" Keyboard="Numeric" Placeholder="S10" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entRepet11" Keyboard="Numeric" Placeholder="S11" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entRepet12" Keyboard="Numeric" Placeholder="S12" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
 
             </StackLayout>
 
@@ -59,19 +59,19 @@
                 <Entry x:Name="entCarga02" Keyboard="Numeric" Placeholder="Q2" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entCarga03" Keyboard="Numeric" Placeholder="Q3" WidthRequest="50" HorizontalTextAlignment="Center"/>
                 <Entry x:Name="entCarga04" Keyboard="Numeric" Placeholder="Q4" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga05" Keyboard="Numeric" Placeholder="Q5" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga06" Keyboard="Numeric" Placeholder="Q6" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga05" Keyboard="Numeric" Placeholder="Q5" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entCarga06" Keyboard="Numeric" Placeholder="Q6" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
 
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="15">
 
-                <Entry x:Name="entCarga07" Keyboard="Numeric" Placeholder="Q8" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga08" Keyboard="Numeric" Placeholder="Q9" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga09" Keyboard="Numeric" Placeholder="Q10" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga10" Keyboard="Numeric" Placeholder="Q11" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga11" Keyboard="Numeric" Placeholder="Q12" WidthRequest="50" HorizontalTextAlignment="Center"/>
-                <Entry x:Name="entCarga12" Keyboard="Numeric" Placeholder="Q13" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entCarga07" Keyboard="Numeric" Placeholder="Q8" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entCarga08" Keyboard="Numeric" Placeholder="Q9" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entCarga09" Keyboard="Numeric" Placeholder="Q10" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entCarga10" Keyboard="Numeric" Placeholder="Q11" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entCarga11" Keyboard="Numeric" Placeholder="Q12" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
+                <Entry x:Name="entCarga12" Keyboard="Numeric" Placeholder="Q13" WidthRequest="50" HorizontalTextAlignment="Center" Text="0"/>
 
             </StackLayout>
 
@@ -85,8 +85,9 @@
             </StackLayout>
 
             <StackLayout Orientation="Horizontal" VerticalOptions="Center">
-                <Button x:Name="btnSalvar" Text="Salvar" Clicked="salvarDados" BorderColor="DarkGreen" BorderWidth="2" WidthRequest="150" CornerRadius="50" BackgroundColor="Green" TextColor="White" HorizontalOptions="CenterAndExpand"/>
-                <Button x:Name="btnApagar" Text="Apagar" Clicked="apagarDados" BorderColor="DarkRed" BorderWidth="2" WidthRequest="150" CornerRadius="50" BackgroundColor="red" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="btnSalvar" Text="Novo" Clicked="salvarDados" BorderColor="DarkGreen" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="Green" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="btnAtualizar" Text="Atualizar" Clicked="AtualizarDados" BorderColor="DarkGray" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="Gray" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="btnApagar" Text="Apagar" Clicked="apagarDados" BorderColor="DarkRed" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="red" TextColor="White" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
 
             <StackLayout HeightRequest="20"/>
