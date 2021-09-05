@@ -9,13 +9,14 @@
             <StackLayout>
 
                 <Label Text="Personalzinho" TextColor="DarkSlateBlue" FontSize="40" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Label Text="Beta" TextColor="DarkSlateBlue" FontSize="12" HorizontalOptions="Center" VerticalOptions="Center" />
                 <Entry x:Name="entID" Placeholder="ID" Text="0" IsVisible="false" IsEnabled="False" />
                 <Entry x:Name="entAluno" Placeholder="Nome do aluno"/>
                 <Entry x:Name="entExercicio" Placeholder="Exercício"/>
 
                 <StackLayout HeightRequest="15"/>
-                <Label Text="Séries" TextColor="DarkSlateBlue" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
-                <Entry x:Name="entSerie" Placeholder="Numero de séries" WidthRequest="50" HorizontalTextAlignment="Center" />
+                <Label Text="Séries" TextColor="DarkSlateBlue"  FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" />
+                <Entry x:Name="entSerie" Placeholder="Numero de séries" Keyboard="Numeric" WidthRequest="50" HorizontalTextAlignment="Center" />
 
 
 
@@ -88,6 +89,7 @@
                 <Button x:Name="btnSalvar" Text="Novo" Clicked="salvarDados" BorderColor="DarkGreen" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="Green" TextColor="White" HorizontalOptions="CenterAndExpand"/>
                 <Button x:Name="btnAtualizar" Text="Atualizar" Clicked="AtualizarDados" BorderColor="DarkGray" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="Gray" TextColor="White" HorizontalOptions="CenterAndExpand"/>
                 <Button x:Name="btnApagar" Text="Apagar" Clicked="apagarDados" BorderColor="DarkRed" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="red" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                <Button x:Name="btnExportar" Text="Exportar" Clicked="exportarDados" BorderColor="DarkBlue" BorderWidth="2" WidthRequest="100" CornerRadius="50" BackgroundColor="blue" TextColor="White" HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
 
             <StackLayout HeightRequest="20"/>

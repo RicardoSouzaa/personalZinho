@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using personalZinho.Celulas;
 using personalZinho.Models;
-using personalZinho.Celulas;
+using System;
+using System.Linq;
+using Xamarin.Forms;
+
 
 namespace personalZinho
 {
     public partial class MainPage : ContentPage
     {
         public Context contexto;
+
         public MainPage()
         {
             InitializeComponent();
@@ -32,34 +30,34 @@ namespace personalZinho
             entID.Text = "";
             entAluno.Text = "";
             entExercicio.Text = "";
-            entSerie.Text = "0";
-            entIntervalo.Text = "0";
+            entSerie.Text = "";
+            entIntervalo.Text = "";
 
-            entRepet01.Text = "0";
-            entRepet02.Text = "0";
-            entRepet03.Text = "0";
-            entRepet04.Text = "0";
-            entRepet05.Text = "0";
-            entRepet06.Text = "0";
-            entRepet07.Text = "0";
-            entRepet08.Text = "0";
-            entRepet09.Text = "0";
-            entRepet10.Text = "0";
-            entRepet11.Text = "0";
-            entRepet12.Text = "0";
+            entRepet01.Text = "";
+            entRepet02.Text = "";
+            entRepet03.Text = "";
+            entRepet04.Text = "";
+            //entRepet05.Text = "0";
+            //entRepet06.Text = "0";
+            //entRepet07.Text = "0";
+            //entRepet08.Text = "0";
+            //entRepet09.Text = "0";
+            //entRepet10.Text = "0";
+            //entRepet11.Text = "0";
+            //entRepet12.Text = "0";
 
-            entCarga01.Text = "0";
-            entCarga02.Text = "0";
-            entCarga03.Text = "0";
-            entCarga04.Text = "0";
-            entCarga05.Text = "0";
-            entCarga06.Text = "0";
-            entCarga07.Text = "0";
-            entCarga08.Text = "0";
-            entCarga09.Text = "0";
-            entCarga10.Text = "0";
-            entCarga11.Text = "0";
-            entCarga12.Text = "0";
+            entCarga01.Text = "";
+            entCarga02.Text = "";
+            entCarga03.Text = "";
+            entCarga04.Text = "";
+            //entCarga05.Text = "0";
+            //entCarga06.Text = "0";
+            //entCarga07.Text = "0";
+            //entCarga08.Text = "0";
+            //entCarga09.Text = "0";
+            //entCarga10.Text = "0";
+            //entCarga11.Text = "0";
+            //entCarga12.Text = "0";
 
         }
 
@@ -82,9 +80,9 @@ namespace personalZinho
 
                 Aluno aluno = AddAluno();
 
-                    contexto.Inserir(aluno);
-                    DisplayAlert("Sucesso", "Aluno e Exercicio inserido com sucesso!", "OK");
-                    ListagemAluno();
+                contexto.Inserir(aluno);
+                DisplayAlert("Sucesso", "Aluno e Exercicio inserido com sucesso!", "OK");
+                ListagemAluno();
 
             }
             catch (Exception ex)
@@ -115,7 +113,7 @@ namespace personalZinho
                 Aluno aluno = AddAluno();
 
                 contexto.Atualizar(aluno);
-               
+
                 DisplayAlert("Sucesso", "Aluno e Exercicio Atualizado com sucesso!", "OK");
                 ListagemAluno();
 
@@ -149,6 +147,14 @@ namespace personalZinho
 
                 throw;
             }
+
+        }
+
+        private void exportarDados(object sender, EventArgs e)
+
+        {
+
+
 
         }
 

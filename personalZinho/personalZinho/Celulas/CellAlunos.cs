@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace personalZinho.Celulas
 {
-    class CellAlunos: ViewCell
+    class CellAlunos : ViewCell
     {
         public CellAlunos()
         {
@@ -28,14 +25,14 @@ namespace personalZinho.Celulas
             var linha1 = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = {Nome, Exercicio}
+                Children = { Nome, Exercicio }
             };
 
             View = new StackLayout
             {
-                Orientation=StackOrientation.Vertical,
-                Children = {linha1}
+                Orientation = StackOrientation.Vertical,
+                Children = { linha1 }
             };
-         }
+        }
     }
 }

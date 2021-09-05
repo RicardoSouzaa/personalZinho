@@ -9,7 +9,7 @@ namespace personalZinho.Models
         public Context()
         {
             var pasta = new LocalRootFolder();
-            var arquivo = pasta.CreateFile("appPersonalzinho", PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
+            var arquivo = pasta.CreateFile("appPersonalzinho.db", PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
             conexao = new SQLiteConnection(arquivo.Path);
             conexao.CreateTable<Aluno>();
 
