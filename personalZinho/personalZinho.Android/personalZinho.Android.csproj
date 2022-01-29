@@ -56,8 +56,8 @@
     <AndroidLinkMode>Full</AndroidLinkMode>
     <MandroidI18n />
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
-    <AndroidSupportedAbis>x86</AndroidSupportedAbis>
+    <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
+    <AndroidSupportedAbis>x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
